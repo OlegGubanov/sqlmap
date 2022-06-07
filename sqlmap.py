@@ -13,6 +13,7 @@ try:
     sys.dont_write_bytecode = True
 
     try:
+        sys.path.insert(0, 'sqlmap/')
         __import__("lib.utils.versioncheck")  # this has to be the first non-standard import
     except ImportError:
         sys.exit("[!] wrong installation detected (missing modules). Visit 'https://github.com/sqlmapproject/sqlmap/#installation' for further details")
